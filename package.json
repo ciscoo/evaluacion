@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node ./bin/www",
     "dev": "nodemon -r dotenv/config ./bin/www",
-    "lint": "eslint src/** && eslint bin/**"
+    "lint": "eslint src/** && eslint bin/**",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -45,7 +46,21 @@
     "root": true,
     "extends": "airbnb-base",
     "env": {
-      "node": true
+      "node": true,
+      "jest": true
     }
+  },
+  "jest": {
+    "setupTestFrameworkScriptFile": "./__tests__/setup.js",
+    "testPathIgnorePatterns": [
+      "setup.js"
+    ],
+    "testEnvironment": "node",
+    "collectCoverageFrom": [
+      "**/*.js",
+      "!**/node_modules/**",
+      "!**/coverage/**",
+      "!**/index.js"
+    ]
   }
 }
