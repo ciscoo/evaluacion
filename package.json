@@ -1,0 +1,51 @@
+{
+  "name": "evaluacion",
+  "version": "1.0.0",
+  "description": "Small project for Solstice's hiring process to assess skill, experience, and more.",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "dev": "nodemon -r dotenv/config ./bin/www",
+    "lint": "eslint src/** && eslint bin/**"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ciscoo/evaluacion.git"
+  },
+  "author": "Francisco Mateo <cisco@mateo.io>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ciscoo/evaluacion/issues"
+  },
+  "homepage": "https://github.com/ciscoo/evaluacion#readme",
+  "pre-commit": [
+    "lint"
+  ],
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "debug": "^3.0.0",
+    "express": "^4.15.4",
+    "helmet": "^3.8.1",
+    "mongoose": "^4.11.6"
+  },
+  "devDependencies": {
+    "dotenv": "^4.0.0",
+    "eslint": "^4.4.1",
+    "eslint-config-airbnb-base": "^11.3.1",
+    "eslint-plugin-import": "^2.7.0",
+    "jest": "^20.0.4",
+    "nodemon": "^1.11.0",
+    "pre-commit": "^1.2.2"
+  },
+  "engines": {
+    "node": ">= 7.6",
+    "npm": ">= 4.x"
+  },
+  "eslintConfig": {
+    "root": true,
+    "extends": "airbnb-base",
+    "env": {
+      "node": true
+    }
+  }
+}
