@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const helmet = require('helmet');
+const { apiRoutes } = require('./routes');
 
 const app = express();
 
@@ -21,5 +22,8 @@ app.use(helmet());
 // Allows parsing the body content via `req.body`
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+
+// Mount API routes.
+app.use('/api', apiRoutes);
 
 module.exports = app;
