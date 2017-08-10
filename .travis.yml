@@ -1,0 +1,16 @@
+language: node_js
+node_js:
+  - "8"
+  - "7"
+env: "MONGO_URI=mongodb://localhost/solstice"
+sudo: false
+cache:
+  directories:
+    - node_modules
+before_install:
+  # Update Node.js modules
+  - "test ! -d node_modules || npm prune"
+  - "test ! -d node_modules || npm rebuild"
+script:
+  - "npm run test"
+  - "npm run lint"
