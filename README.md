@@ -4,6 +4,8 @@
 [![Coverage Status](https://coveralls.io/repos/github/ciscoo/evaluacion/badge.svg?branch=master)](https://coveralls.io/github/ciscoo/evaluacion?branch=master)
 [![Build Status](https://travis-ci.org/ciscoo/evaluacion.svg?branch=master)](https://travis-ci.org/ciscoo/evaluacion)
 
+**Live Demo:** https://nameless-thicket-93416.herokuapp.com/api/contacts/
+
 An [Express](https://expressjs.com/) app that exposes a RESTful API for a single resource. Part of Solstice's backend coding challenge for new hires.
 
 ### Features
@@ -16,6 +18,7 @@ An [Express](https://expressjs.com/) app that exposes a RESTful API for a single
 - Continuous Integration (CI) with [Travis CI](https://travis-ci.org/). (see below).
 - Code coverage with [Coveralls](https://coveralls.io/github/ciscoo/evaluacion).
 - Model–view–controller (MVC) architectural pattern.
+- Heroku/Dokku support.
 
 ### Core Libraries/Modules
 
