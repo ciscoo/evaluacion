@@ -19,6 +19,11 @@ exports.store = async (req, res) => {
 
 exports.show = async (req, res) => {
   const contact = await Contact.findById(req.params.id).exec();
+  if (contact.deletedAt) {
+    const error = new Error('Resource does not exist.');
+    error.status = 404;
+    throw error;
+  }
   res.json({
     status: 200,
     data: contact,

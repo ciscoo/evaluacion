@@ -149,4 +149,15 @@ describe('controllers.Contact', () => {
     expect(res.data).not.toBeDefined();
     expect(res.code).toBe(204);
   });
+
+  test('.show() should not show deleted contacts', async () => {
+    // eslint-disable-next-line no-underscore-dangle
+    req.params.id = contact._id;
+    try {
+      await contactController.show(req, res);
+    } catch (error) {
+      expect(error).toBeInstanceOf(Error);
+      expect(error.status).toBe(404);
+    }
+  });
 });
