@@ -27,10 +27,7 @@ An [Express](https://expressjs.com/) app that exposes a RESTful API for a single
 * [ESLint](https://github.com/eslint/eslint)
 * [nodemon](https://github.com/remy/nodemon)
 
-**Note**:
-
-* Travis will pass and fail randomly for a different test each time. Haven't figured out why yet.
-* Logging was intentionally left out as there are a [few](https://github.com/expressjs/morgan) [ways](https://github.com/trentm/node-bunyan) [to](https://github.com/winstonjs/winston) approach it depending on your needs. For the purposes of this project, logging was not needed.
+**Note**: Logging was intentionally left out as there are a [few](https://github.com/expressjs/morgan) [ways](https://github.com/trentm/node-bunyan) [to](https://github.com/winstonjs/winston) approach it depending on your needs. For the purposes of this project, logging was not needed.
 
 ## Prerequisites
 
