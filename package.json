@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node ./bin/www",
     "dev": "nodemon -r dotenv/config ./bin/www",
-    "lint": "eslint src/** && eslint bin/**",
+    "lint": "eslint app/** && eslint bin/**",
     "test": "jest"
   },
   "repository": {
