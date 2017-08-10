@@ -110,6 +110,21 @@ describe('controllers.Contact', () => {
     expect(kontact.phone).toEqual(req.body.phone);
   });
 
+  test('.update() should remove `deletedAt` from `req.body` if it exists', async () => {
+    // eslint-disable-next-line no-underscore-dangle
+    req.params.id = contact._id;
+
+    req.body = {
+      name: 'Cisco Mateo',
+      phone: '1234567890',
+      deletedAt: 'should be removed',
+    };
+
+    await contactController.update(req, res);
+
+    expect(req.body.deletedAt).not.toBeDefined();
+  });
+
   test('.index() should retrieve a list of contacts', async () => {
     await contactController.index(req, res);
 
