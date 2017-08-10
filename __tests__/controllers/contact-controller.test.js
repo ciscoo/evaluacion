@@ -148,11 +148,5 @@ describe('controllers.Contact', () => {
 
     expect(res.data).not.toBeDefined();
     expect(res.code).toBe(204);
-
-    // Verify resource wasn't actually deleted.
-    await contactController.show(req, res);
-    const kontact = JSON.parse(res.data).data;
-
-    expect(kontact.deletedAt).toBeDefined();
   });
 });
