@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const models = require('../app/models');
 
+process.env.MONGO_URI = process.env.MONGO_URI || 'mongodb://localhost/solstice';
 mongoose.Promise = global.Promise;
 
 /**
@@ -11,7 +12,7 @@ mongoose.Promise = global.Promise;
  * before each test suite.
  */
 beforeAll(async () => Promise.all([
-  mongoose.connect('mongodb://localhost/solstice-test', { useMongoClient: true }),
+  mongoose.connect(process.env.MONGO_URI, { useMongoClient: true }),
   ...Object.keys(models).map(key => models[key].remove({})),
 ]));
 
