@@ -14,9 +14,9 @@ describe('models.Contact', () => {
 
     test('passes with all required properties', async () => {
       await new Contact({ name: 'Jon', phone: '2629950000' }).save();
-      const contacts = await Contact.find().exec();
-      expect(contacts).toBeDefined();
-      expect(contacts.length).toBe(1);
+      const contact = await Contact.findOne({ name: 'Jon' }).exec();
+      expect(contact).toBeDefined();
+      expect(contact.name).toBe('Jon');
     });
 
     test('fails when there are any type mismatches', async () => {
