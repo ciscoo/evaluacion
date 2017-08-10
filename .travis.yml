@@ -3,6 +3,7 @@ node_js:
   - "8"
   - "7"
 env: "MONGO_URI=mongodb://localhost/solstice"
+services: mongodb
 sudo: false
 cache:
   directories:
