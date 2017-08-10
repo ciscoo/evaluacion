@@ -14,3 +14,4 @@ before_install:
 script:
   - "npm run test"
   - "npm run lint"
+after_script: "npm install coveralls && cat ./coverage/lcov.info | coveralls"
