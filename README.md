@@ -29,6 +29,18 @@ An [Express](https://expressjs.com/) app that exposes a RESTful API for a single
 
 **Note**: Logging was intentionally left out as there are a [few](https://github.com/expressjs/morgan) [ways](https://github.com/trentm/node-bunyan) [to](https://github.com/winstonjs/winston) approach it depending on your needs. For the purposes of this project, logging was not needed.
 
+## Available routes
+
+**Note**: All endpoints are relative to `/api`, unless otherwise noted.
+
+| HTTP Method	| URL             | Description                 |
+|:-----------:|:----------------|:----------------------------|
+| `GET`      	| `/contacts`     | Returns a list of contacts. |
+| `GET`      	| `/contacts/:id` | Returns a contact.          |
+| `DELETE`   	| `/contacts/:id` | Deletes a contact.          |
+| `PATCH`    	| `/contacts/:id` | Updates a contact.          |
+| `POST`      | `/contacts`     | Creates a contact.          |
+
 ## Prerequisites
 
 - [MongoDB](https://www.mongodb.com/download-center)
