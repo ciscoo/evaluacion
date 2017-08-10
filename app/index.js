@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const helmet = require('helmet');
 const { apiRoutes } = require('./routes');
+const { errorHandlers } = require('./middleware');
 
 const app = express();
 
@@ -25,5 +26,10 @@ app.use(bodyParser.json());
 
 // Mount API routes.
 app.use('/api', apiRoutes);
+
+// Handle any errors.
+app.use(errorHandlers.invalidRoute);
+app.use(errorHandlers.validationErrors);
+app.use(errorHandlers.displayErrors);
 
 module.exports = app;
