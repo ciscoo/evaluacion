@@ -36,7 +36,7 @@ exports.validationErrors = (error, req, res, next) => {
  * The last error handler in the chain. Formats the error based
  * on the `NODE_ENV` environment variable.
  */
-exports.displayErrors = (error, req, res, next) => {
+exports.displayErrors = (error, req, res, next) => { // eslint-disable-line no-unused-vars
   const err = error;
   const status = err.status || 500;
   delete err.status;
