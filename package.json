@@ -19,9 +19,6 @@
     "url": "https://github.com/ciscoo/evaluacion/issues"
   },
   "homepage": "https://github.com/ciscoo/evaluacion#readme",
-  "pre-commit": [
-    "lint"
-  ],
   "dependencies": {
     "body-parser": "^1.17.2",
     "debug": "^3.0.0",
@@ -35,8 +32,7 @@
     "eslint-config-airbnb-base": "^11.3.1",
     "eslint-plugin-import": "^2.7.0",
     "jest": "^20.0.4",
-    "nodemon": "^1.11.0",
-    "pre-commit": "^1.2.2"
+    "nodemon": "^1.11.0"
   },
   "engines": {
     "node": ">= 7.6",
